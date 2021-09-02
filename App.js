@@ -12,13 +12,16 @@ app.use(express.json())
 const ClientRouter = require('./Routers/ClientRouter')
 const CoiffeurRouter = require('./Routers/CoiffeurRouter')
 const AdminRouter = require('./Routers/AdminRouter')
+const ReserverRouter = require('./Routers/ReserverRouter')
+
 
 
 
 app.use(cors())
-app.use('/app/client',ClientRouter)
-app.use('/app/coiffeur',CoiffeurRouter)
-app.use('/app/admin',AdminRouter)
+app.use('/e-beauty/client',ClientRouter)
+app.use('/e-beauty/coiffeur',CoiffeurRouter)
+app.use('/e-beauty/admin',AdminRouter)
+app.use('/e-beauty/reserver',ReserverRouter)
 
 
 module.exports = app;
