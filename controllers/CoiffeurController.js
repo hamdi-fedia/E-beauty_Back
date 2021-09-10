@@ -183,6 +183,7 @@ currentUsers:async (req, res) => {
 
 
 
+
   getCoiffeur: async (req, res) => {
     try {
       const coiffeur = await coiffeurModel.find();

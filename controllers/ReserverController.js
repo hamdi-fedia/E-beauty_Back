@@ -8,11 +8,28 @@ module.exports = {
   addReserver: async (req, res) => {
     // const { name, email } = req.body
    const date_reservatrion = req.body.date_reservatrion
+   const id_coiffeur = req.body.id_coiffeur
+   const id_client=req.body.id_client
+   const nom_coiffeur=req.body.nom_coiffeur
+   const nom_client=req.body.nom_client
+   const heure = req.body.heure
+   const speciality= req.body.speciality
+   const adresse=req.body.adresse
    const prix = req.body.prix
+   const status=req.body.status
     try {
       reserver = new reserverModel({
         date_reservatrion,
-        prix
+        id_coiffeur,
+        id_client,
+        nom_coiffeur,
+        nom_client,
+        heure,
+        speciality,
+        adresse,
+        prix,
+        status
+   
       })
       await reserver.save() 
       res.json(reserver)

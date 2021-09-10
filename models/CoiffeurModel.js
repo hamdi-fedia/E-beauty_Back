@@ -3,15 +3,15 @@ const uniqueValidator = require('mongoose-unique-validator')
 
 
 const CoiffeurModel = new mongoose.Schema({
-  nom: { type: String, required: true },
-  prenom: { type: String, required: true },
-  sexe_coiffeur: { type: String, required: true },
-  ville_coiffeur: { type: String, required: true },
-  tel_coiffeur: { type: Number, required: true },
-  email_coiffeur: { type: String, required: true ,unique:true},
-  hash_password: { type: String, required: true },
-  photo_coiffeur: { type: String, required: true },
-  speciality:{ type: String, required: true },
+  nom: { type: String  },
+  prenom: { type: String  },
+  sexe_coiffeur: { type: String },
+  ville_coiffeur: { type: String },
+  tel_coiffeur: { type: String  },
+  email_coiffeur: { type: String ,unique:true},
+  hash_password: { type: String },
+  photo_coiffeur: { type: String },
+  speciality:{ type: String  },
 });
 
 CoiffeurModel.virtual('password_coiffeur')
