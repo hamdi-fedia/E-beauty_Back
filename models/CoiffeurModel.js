@@ -14,9 +14,6 @@ const CoiffeurModel = new mongoose.Schema({
   speciality:{ type: String  },
 });
 
-// CoiffeurModel.virtual('password_coiffeur')
-// .set(function(password_coiffeur){
-//     this.hash_password = bcrypt.hashSync(password_coiffeur, 10);
-// });
+
 
 module.exports = coiffeur =  mongoose.model('coiffeur', CoiffeurModel);

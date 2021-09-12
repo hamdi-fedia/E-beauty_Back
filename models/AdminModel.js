@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator')
 
 const AdminModel = mongoose.Schema({
 
@@ -9,6 +8,6 @@ const AdminModel = mongoose.Schema({
   password_admin: { type: String, required: true },
 });
 
-AdminModel.plugin(uniqueValidator)
+
 
 module.exports = mongoose.model('admin', AdminModel);

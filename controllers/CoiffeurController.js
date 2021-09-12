@@ -211,9 +211,6 @@ login : (req, res) => {
 
 
 
-
-
-
 currentUsers:async (req, res) => {
   try {
     const user = await coiffeurModel.findOne(req.params.id) ;

@@ -6,7 +6,7 @@ module.exports = {
   //Add reserver
 
   addReserver: async (req, res) => {
-    // const { name, email } = req.body
+  
    const date_reservatrion = req.body.date_reservatrion
    const id_coiffeur = req.body.id_coiffeur
    const id_client=req.body.id_client
