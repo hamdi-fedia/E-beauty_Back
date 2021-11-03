@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 // const config = require("config");
 
 module.exports = (req, res, next) => {
-  const token = req.header("token");
+  const token = req.header("token"); 
 
   if (!token) {
     return res.status(401).json("token inexiste, authorization réfusé");
@@ -15,3 +15,5 @@ module.exports = (req, res, next) => {
     res.send("token inexiste");
   }
 };
+
+
